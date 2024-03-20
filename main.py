@@ -1,11 +1,10 @@
-"""Программа генерации идей для Фуфелшмерца"""
+"""Программа генерации идей для Фуфелшмерца."""
 import random
 import csv
 
 
 def idea_generator():
-    """Метод генерации идеи"""
-
+    """Метод генерации идеи."""
     first = ()
     with open('words.csv', newline='', encoding='UTF8') as my_file:
         words_file = csv.reader(my_file)
@@ -19,8 +18,7 @@ def idea_generator():
 
 
 def main():
-    """Основной метод main"""
-
+    """Основной метод main."""
     print("Добро пожаловать в Имявыбиратор3000\n")
     print("Вот один из вариантов вашего инатора:")
 
