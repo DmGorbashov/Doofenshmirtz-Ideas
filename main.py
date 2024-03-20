@@ -1,10 +1,11 @@
+"""Программа генерации идей для Фуфелшмерца"""
 import random
 import csv
 
 
-def main():
-    print("Добро пожаловать в Имявыбиратор3000\n")
-    print("Вот один из вариантов вашего инатора:")
+def idea_generator():
+    """Метод генерации идеи"""
+
     first = ()
     with open('words.csv', newline='', encoding='UTF8') as my_file:
         words_file = csv.reader(my_file)
@@ -12,13 +13,20 @@ def main():
             first += (word[0],)
 
     second = ('MEGA', 'MAX', 'SUPER', 'Ultra')
+    first_part = random.choice(first)
+    second_part = random.choice(second)
+    return first_part, second_part
+
+
+def main():
+    """Основной метод main"""
+
+    print("Добро пожаловать в Имявыбиратор3000\n")
+    print("Вот один из вариантов вашего инатора:")
 
     while True:
-        first_part = random.choice(first)
-        second_part = random.choice(second)
-
-        print("")
-        print(f"{second_part} {first_part}инатор")
+        new_idea = idea_generator()
+        print(f"{new_idea[1]} {new_idea[0]}инатор")
 
         try_again = input("\n\nДругой? (нажми Enter, чтобы продолжить; либо n, чтобы выйти)")
 
@@ -26,7 +34,6 @@ def main():
             break
 
     input("\nНажми Enter для завершения работы.")
-
 
 if __name__ == "__main__":
     main()
