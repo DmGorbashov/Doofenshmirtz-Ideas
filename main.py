@@ -13,10 +13,9 @@ while True:
     print("")
     print(f"{secondPart} {firstPart}инатор")
 
-    tryAgain = input("\n\nДругой? (нажми Enter, либо n, чтобы выйти)")
+    tryAgain = input("\n\nДругой? (нажми Enter, чтобы продолжить; либо n, чтобы выйти)")
 
     if tryAgain.lower() == "n":
         break
 
 input("\nНажми Enter для завершения работы.")
-
